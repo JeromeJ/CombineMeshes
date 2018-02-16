@@ -74,6 +74,9 @@ public class DualBehaviour : MonoBehaviour
         string newEditor_path       = Path.Combine(destination, _name + "Editor.cs");
         string newEditor_content    = template_content.Replace("#CLASSNAME#", _name);
 
+        string newEditor_relpath    = "Assets" + newEditor_path.Substring(Application.dataPath.Length);
+
+        Debug.Log("Creating " + newEditor_relpath);
         File.WriteAllText(newEditor_path, newEditor_content);
 
         AssetDatabase.Refresh();
