@@ -8,8 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3115a8596b83022429b4f01d8a4cd64b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2cf9a60bea54b2a4cbe9158cea9b5f80, type: 3}
   m_Name: _ninjaData
   m_EditorClassIdentifier: 
-  unityDirectory: C:\Program Files\Unity2017.3.0f3\Editor
-  importNinja_template: C:\Program Files\Unity2017.3.0f3\Editor\Data\Resources\ScriptTemplates\ImportNinjaTemplate\
+  SceneFolder: Assets\__MeshCombiner - Yeay\Scenes\
+  EnableDebug: 1

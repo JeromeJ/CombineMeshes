@@ -16,15 +16,15 @@ public class MeshCombinerEditor : Editor
 
     public void OnSceneGUI()
     {
-        MeshCombiner mc = (MeshCombiner) base.target;
+        MeshCombiner mc = (MeshCombiner)base.target;
 
-        //EditorGUI.BeginChangeCheck();
-        //float areaOfEffect = Handles.RadiusHandle(Quaternion.identity, mc.transform.position, mc._Test);
-        //if (EditorGUI.EndChangeCheck())
-        //{
-        //    Undo.RecordObject(target, "Changed Area Of Effect");
-        //    mc._Test = areaOfEffect;
-        //}
+        EditorGUI.BeginChangeCheck();
+        float areaOfEffect = Handles.RadiusHandle(Quaternion.identity, mc.transform.position, mc._Test);
+        if (EditorGUI.EndChangeCheck())
+        {
+            Undo.RecordObject(target, "Changed Area Of Effect");
+            mc._Test = areaOfEffect;
+        }
 
         if (Handles.Button(mc.transform.position + Vector3.up * 20, Quaternion.LookRotation(Vector3.up), 1, 1, Handles.SphereHandleCap))
             mc.CombineMeshes();
